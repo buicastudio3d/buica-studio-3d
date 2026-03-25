@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buica Studio 3D | Impressão e Modelagem</title>
+    <style>
+        /* Estilos Globais */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Fundo Escuro */
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #f39c12; /* Laranja do Logo */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f39c12;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db; /* Azul do Logo */
+        }
+
+        /* Seção Hero (Destaque) */
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+            background: radial-gradient(circle, #2c3e50 0%, #000000 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #f39c12, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-orcamento {
+            background-color: #f39c12;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.2s;
+        }
+
+        .btn-orcamento:hover {
+            transform: scale(1.05);
+            background-color: #e67e22;
+        }
+
+        /* Grid de Portfólio */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #3498db;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #333; /* Placeholder para suas fotos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #0a0a0a;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BUICA STUDIO 3D</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Transformando Ideias em Matéria</h1>
+        <p>Impressão 3D de alta precisão e modelagem personalizada.</p>
+        <button class="btn-orcamento">Solicitar Orçamento</button>
+    </section>
+
+    <div class="container" id="portfolio">
+        <h2 style="text-align: center; margin-bottom: 40px;">Nossos Produtos</h2>
+        <div class="grid-produtos">
+            
+            <div class="card">
+                <div class="card-img">PEÇA MECÂNICA</div>
+                <div class="card-info">
+                    <h3>Prototipagem Industrial</h3>
+                    <p>Engrenagens e componentes técnicos com alta resistência.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">MINIATURA</div>
+                <div class="card-info">
+                    <h3>Colecionáveis</h3>
+                    <p>Miniaturas ricas em detalhes para RPG e decoração.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">ACESSÓRIO VR</div>
+                <div class="card-info">
+                    <h3>Gadgets Tech</h3>
+                    <p>Suportes e modificações para Realidade Virtual e Setup.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Buica Studio 3D - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -3,191 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buica Studio 3D | Impressão e Modelagem</title>
+    <title>Buica Studio 3D | Em Manutenção</title>
     <style>
-        /* Estilos Globais */
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212; /* Fundo Escuro */
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
             color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(90deg, #1a1a1a, #2c2c2c);
-            padding: 1rem 5%;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            border-bottom: 3px solid #f39c12; /* Laranja do Logo */
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #f39c12;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #3498db; /* Azul do Logo */
-        }
-        
-
-        /* Seção Hero (Destaque) */
-        .hero {
-            padding: 80px 5%;
+            height: 100vh;
+            overflow: hidden;
             text-align: center;
-            background: radial-gradient(circle, #2c3e50 0%, #000000 100%);
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        /* Fundo com efeito de colmeia/hexágono sutil */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .logo-placeholder {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #f39c12, #3498db);
+            background: linear-gradient(135deg, #f39c12 0%, #3498db 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .btn-orcamento {
-            background-color: #f39c12;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
             text-transform: uppercase;
-            transition: transform 0.2s;
         }
 
-        .btn-orcamento:hover {
-            transform: scale(1.05);
-            background-color: #e67e22;
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
 
-        /* Grid de Portfólio */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+        p {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 30px;
         }
 
-        .grid-produtos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+        .loader {
+            border: 4px solid #333;
+            border-top: 4px solid #f39c12;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
         }
 
-        .card {
-            background: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #333;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: transparent;
+            border: 2px solid #3498db;
+            color: #3498db;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
-        .card:hover {
-            border-color: #3498db;
+        .social-link:hover {
+            background: #3498db;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
         }
 
-        .card-img {
+        .footer-note {
+            position: absolute;
+            bottom: 30px;
             width: 100%;
-            height: 200px;
-            background-color: #333; /* Placeholder para suas fotos */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-info {
-            padding: 20px;
-        }
-
-        .card-info h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #0a0a0a;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
+            font-size: 0.8rem;
+            color: #444;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">BUICA STUDIO 3D</div>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="logo-placeholder">BUICA</div>
+        <h1>Studio 3D</h1>
+        
+        <div class="loader"></div>
+        
+        <p>Estamos calibrando nossas máquinas e modelando algo incrível para você. <br> Voltamos em breve!</p>
 
-    <section class="hero">
-        <h1>Transformando Ideias em Matéria</h1>
-        <p>Impressão 3D de alta precisão e modelagem personalizada.</p>
-        <button class="btn-orcamento">Solicitar Orçamento</button>
-    </section>
-
-    <div class="container" id="portfolio">
-        <h2 style="text-align: center; margin-bottom: 40px;">Nossos Produtos</h2>
-        <div class="grid-produtos">
-            
-            <div class="card">
-                <div class="card-img">PEÇA MECÂNICA</div>
-                <div class="card-info">
-                    <h3>Prototipagem Industrial</h3>
-                    <p>Engrenagens e componentes técnicos com alta resistência.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">MINIATURA</div>
-                <div class="card-info">
-                    <h3>Colecionáveis</h3>
-                    <p>Miniaturas ricas em detalhes para RPG e decoração.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">ACESSÓRIO VR</div>
-                <div class="card-info">
-                    <h3>Gadgets Tech</h3>
-                    <p>Suportes e modificações para Realidade Virtual e Setup.</p>
-                </div>
-            </div>
-
-        </div>
+        <a href="https://wa.me/SEUNUMERO" class="social-link">Falar com Especialista</a>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Buica Studio 3D - Todos os direitos reservados.</p>
-    </footer>
+    <div class="footer-note">
+        &copy; 2026 Buica Studio 3D - Impressão e Modelagem de Alta Precisão.
+    </div>
 
 </body>
 </html>

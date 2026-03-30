@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,11 +15,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
+            padding: 40px 0;
         }
 
-        /* Fundo com textura sutil */
         body::before {
             content: "";
             position: absolute;
@@ -30,59 +31,59 @@
 
         .container {
             padding: 20px;
-            max-width: 900px;
+            max-width: 800px;
             width: 95%;
         }
 
-        /* Estilo da sua imagem */
         .banner-img {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        h1 {
-            font-size: 1.5rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #f39c12; /* Laranja do Logo */
-            margin-bottom: 10px;
+        h1 { font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; color: #f39c12; margin-bottom: 20px; }
+
+        /* Estilo dos Botões das Redes Sociais */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
         }
 
-        p {
-            color: #888;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        .btn-contato {
-            display: inline-block;
-            padding: 15px 35px;
-            background: linear-gradient(90deg, #f39c12, #e67e22);
-            color: white;
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
             text-decoration: none;
-            border-radius: 5px;
+            color: white;
             font-weight: bold;
-            text-transform: uppercase;
+            border-radius: 8px;
             transition: 0.3s;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .btn-contato:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
-        }
+        .btn-social:hover { transform: translateY(-3px); }
+
+        .youtube { background: #c4302b; }
+        .tiktok { background: #010101; border: 1px solid #ff0050; }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .drive { background: #1e8e3e; }
+        .whatsapp { background: #25d366; grid-column: 1 / -1; margin-top: 10px; } /* Botão de destaque */
 
         .loader {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             border: 3px solid #333;
             border-top: 3px solid #3498db;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            margin: 10px auto;
         }
 
         @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -91,13 +92,22 @@
 <body>
 
     <div class="container">
-<img src="Gemini_Generated_Image_zhw2n8zhw2n8zhw2.png" alt="Buica Studio 3D" class="banner-img">
+        <img src="logo.png" alt="Buica Studio 3D" class="banner-img">
         
         <h1>Site em Manutenção</h1>
         <div class="loader"></div>
-        <p>Estamos preparando nosso catálogo de impressões 3D.</p>
-
-        <a href="https://wa.me/SEUNUMERO" class="btn-contato">Orçamentos via WhatsApp</a>
+        
+        <div class="social-grid">
+            <a href="https://www.youtube.com/@BuicaStudio3D" target="_blank" class="btn-social youtube">YouTube</a>
+            
+            <a href="https://www.tiktok.com/@buicastudio3d" target="_blank" class="btn-social tiktok">TikTok</a>
+            
+            <a href="https://www.instagram.com/buicastudio3d/" target="_blank" class="btn-social instagram">Instagram</a>
+            
+            <a href="https://drive.google.com/drive/folders/1hJlINxgtvum7AkQMFqj4JagBrr9QeV78?usp=sharing" target="_blank" class="btn-social drive">Modelos 3D (Drive)</a>
+            
+            <a href="https://wa.me/55DDDNÚMERO" target="_blank" class="btn-social whatsapp">Falar no WhatsApp / Orçamentos</a>
+        </div>
     </div>
 
 </body>

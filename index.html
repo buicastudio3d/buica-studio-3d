@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buica Studio 3D | Links Oficiais</title>
+    <title>Buica Studio 3D | Links</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -50,6 +50,7 @@
             gap: 15px;
         }
 
+        /* PADRÃO DE BOTÃO SÓLIDO */
         .btn-social {
             width: 100%;
             padding: 18px;
@@ -60,8 +61,8 @@
             text-align: center;
             font-size: 1.1rem;
             transition: 0.3s;
-            border: none;
             display: block;
+            border: none !important; /* Remove qualquer borda estranha */
         }
 
         .btn-social:hover {
@@ -69,20 +70,19 @@
             filter: brightness(1.2);
         }
 
-        /* CORES DOS BOTÕES - PADRONIZADAS */
-        
-        .youtube { background-color: #ff0000; } /* Vermelho Vivo */
+        /* CORES ESPECÍFICAS - AGORA COM !IMPORTANT PARA NÃO FALHAR */
+        .youtube { background-color: #ff0000 !important; }
         
         .tiktok { 
-            background-color: #000000; /* Fundo totalmente preto */
-            border: 2px solid #ff0050 !important; /* Borda rosa neon */
+            background-color: #000000 !important; 
+            border: 2px solid #ff0050 !important; /* Borda rosa para destacar no fundo preto */
         }
         
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; }
         
-        .drive { background-color: #ff0000; } /* Vermelho Vivo igual YouTube */
+        .drive { background-color: #ff0000 !important; } /* Vermelho igual YouTube */
         
-        .whatsapp { background-color: #25d366; margin-top: 10px; }
+        .whatsapp { background-color: #25d366 !important; margin-top: 10px; }
 
         .loader {
             width: 25px;
@@ -102,7 +102,7 @@
     <div class="container">
         <img src="Gemini_Generated_Image_zhw2n8zhw2n8zhw2.png" alt="Buica Studio 3D" class="banner-img">
         
-        <h1>Site em Manutenção</h1>
+        <h1>Links Oficiais</h1>
         <div class="loader"></div>
         
         <div class="social-grid">

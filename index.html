@@ -1,11 +1,3 @@
-
-Perfeito! Fiz as alterações no código para que os botões fiquem exatamente como você pediu: o Drive em vermelho (estilo YouTube) e o TikTok preenchido com a borda vibrante.
-
-Também aproveitei para limpar qualquer resíduo de texto estranho e garantir que a lista de botões fique bem alinhada.
-
-Aqui está o código completo. É só copiar tudo e colar por cima do seu index.html no GitHub:
-
-HTML
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,7 +45,7 @@ HTML
 
         h1 { font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; color: #f39c12; margin-bottom: 20px; }
 
-        /* Estilo dos Botões das Redes Sociais */
+        /* Estilo dos Botões - Padronização Total */
         .social-grid {
             display: flex;
             flex-direction: column;
@@ -65,34 +57,36 @@ HTML
         .btn-social {
             width: 100%;
             display: block;
-            padding: 15px;
+            padding: 16px; /* Aumentei um pouco para dar mais presença */
             text-decoration: none;
             color: white;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
             transition: 0.3s;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: none; /* Removido bordas genéricas */
+            font-size: 1rem;
         }
 
-        .btn-social:hover { transform: translateY(-3px); }
+        .btn-social:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
         /* Cores solicitadas */
-        .youtube { background: #c4302b; }
+        .youtube { background-color: #c4302b; }
         
-        /* TikTok agora preenchido e com borda vibrante */
+        /* TikTok: Preto sólido com detalhe em rosa vibrante na borda para destaque */
         .tiktok { 
-            background: #010101; 
-            border: 2px solid #ff0050; 
-            box-shadow: 0 0 10px rgba(255, 0, 80, 0.2);
+            background-color: #010101; 
+            border: 2px solid #ff0050 !important; /* Forçando a borda rosa */
+            box-shadow: 0 0 15px rgba(255, 0, 80, 0.2);
         }
         
         .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
         
-        /* Drive agora em Vermelho igual ao YouTube */
-        .drive { background: #c4302b; } 
+        /* Drive: Vermelho igual ao YouTube conforme pedido */
+        .drive { background-color: #c4302b; } 
         
-        .whatsapp { background: #25d366; margin-top: 10px; }
+        /* WhatsApp: Verde padrão */
+        .whatsapp { background-color: #25d366; margin-top: 10px; }
 
         .loader {
             width: 30px;

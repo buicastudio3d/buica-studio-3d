@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buica Studio 3D | Links</title>
+    <title>Buica Studio 3D | Links Oficiais</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -50,7 +50,6 @@
             gap: 15px;
         }
 
-        /* PADRÃO DE BOTÃO SÓLIDO */
         .btn-social {
             width: 100%;
             padding: 18px;
@@ -62,7 +61,7 @@
             font-size: 1.1rem;
             transition: 0.3s;
             display: block;
-            border: none !important; /* Remove qualquer borda estranha */
+            border: none !important;
         }
 
         .btn-social:hover {
@@ -70,19 +69,19 @@
             filter: brightness(1.2);
         }
 
-        /* CORES ESPECÍFICAS - AGORA COM !IMPORTANT PARA NÃO FALHAR */
-        .youtube { background-color: #ff0000 !important; }
+        /* CORES CORRIGIDAS */
+        #btn-youtube { background-color: #ff0000 !important; }
         
-        .tiktok { 
+        #btn-tiktok { 
             background-color: #000000 !important; 
-            border: 2px solid #ff0050 !important; /* Borda rosa para destacar no fundo preto */
+            border: 2px solid #ff0050 !important; 
         }
         
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; }
+        #btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; }
         
-        .drive { background-color: #ff0000 !important; } /* Vermelho igual YouTube */
+        #btn-drive { background-color: #ff0000 !important; } /* Vermelho igual ao YouTube */
         
-        .whatsapp { background-color: #25d366 !important; margin-top: 10px; }
+        #btn-whatsapp { background-color: #25d366 !important; margin-top: 10px; }
 
         .loader {
             width: 25px;
@@ -106,15 +105,15 @@
         <div class="loader"></div>
         
         <div class="social-grid">
-            <a href="https://www.youtube.com/@BuicaStudio3D" target="_blank" class="btn-social youtube">YouTube</a>
+            <a href="https://www.youtube.com/@BuicaStudio3D" target="_blank" class="btn-social" id="btn-youtube">YouTube</a>
             
-            <a href="https://www.tiktok.com/@buicastudio3d" target="_blank" class="btn-social tiktok">TikTok</a>
+            <a href="https://www.tiktok.com/@buicastudio3d" target="_blank" class="btn-social" id="btn-tiktok">TikTok</a>
             
-            <a href="https://www.instagram.com/buicastudio3d/" target="_blank" class="btn-social instagram">Instagram</a>
+            <a href="https://www.instagram.com/buicastudio3d/" target="_blank" class="btn-social" id="btn-instagram">Instagram</a>
             
-            <a href="https://drive.google.com/drive/folders/1hJlINxgtvum7AkQMFqj4JagBrr9QeV78?usp=sharing" target="_blank" class="btn-social drive">Modelos 3D (Drive)</a>
+            <a href="https://drive.google.com/drive/folders/1hJlINxgtvum7AkQMFqj4JagBrr9QeV78?usp=sharing" target="_blank" class="btn-social" id="btn-drive">Modelos 3D (Drive)</a>
             
-            <a href="https://wa.me/55DDDNÚMERO" target="_blank" class="btn-social whatsapp">Falar no WhatsApp / Orçamentos</a>
+            <a href="https://wa.me/55DDDNÚMERO" target="_blank" class="btn-social" id="btn-whatsapp">WhatsApp / Orçamentos</a>
         </div>
     </div>
 

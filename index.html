@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://buicastudio3d.etsy.com">
-    <title>Buica Studio 3D - Redirecionando...</title>
-    
+    <meta http-equiv="refresh" content="2; url=https://buicastudio3d.etsy.com">
+    <title>Buica Studio 3D</title>
     <style>
         body {
             background-color: #0a0a0a;
             color: #ffffff;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,28 +18,29 @@
             text-align: center;
         }
         .loader {
-            border: 4px solid #333;
-            border-top: 4px solid #f39c12;
+            border: 3px solid #333;
+            border-top: 3px solid #f39c12;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            width: 30px; height: 30px;
             animation: spin 1s linear infinite;
             margin: 20px auto;
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
-        a { color: #f39c12; text-decoration: none; font-weight: bold; }
+        img { max-width: 200px; margin-bottom: 20px; }
     </style>
-
-    <script type="text/javascript">
-        // Redirecionamento via JS como garantia
-        window.location.href = "https://buicastudio3d.etsy.com";
-    </script>
 </head>
 <body>
     <div>
+        <img src="logo.png" alt="Buica Studio 3D">
         <div class="loader"></div>
-        <p>A carregar a nossa loja na Etsy...</p>
-        <p>Se não for redirecionado, <a href="https://buicastudio3d.etsy.com">clique aqui</a>.</p>
+        <p>Estamos a levar você para a nossa loja oficial na <strong>Etsy</strong>...</p>
     </div>
+
+    <script>
+        // Redirecionamento de segurança via Script
+        setTimeout(function(){
+            window.location.href = "https://buicastudio3d.etsy.com";
+        }, 2000);
+    </script>
 </body>
 </html>

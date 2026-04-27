@@ -17,8 +17,14 @@
         }
         .container { max-width: 600px; width: 100%; text-align: center; }
         
-        /* Banner e Logo */
-        .logo { width: 100%; max-width: 500px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 0 30px rgba(243, 156, 18, 0.2); }
+        /* Logo */
+        .logo { 
+            width: 100%; 
+            max-width: 600px; 
+            border-radius: 15px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.2); 
+        }
         
         .intro { margin-bottom: 30px; font-size: 1rem; color: #ccc; padding: 0 10px; }
         .intro strong { color: #f39c12; }
@@ -38,7 +44,7 @@
         .link-grid { display: grid; gap: 12px; }
         .btn {
             display: block;
-            padding: 15px;
+            padding: 16px;
             text-decoration: none;
             color: white;
             font-weight: bold;
@@ -46,43 +52,52 @@
             transition: 0.3s;
             background: #1a1a1a;
             border: 1px solid #333;
+            text-align: center;
         }
-        .btn:hover { transform: translateY(-3px); background: #222; border-color: #f39c12; }
+        .btn:hover { transform: translateY(-3px); background: #222; }
 
-        /* Cores Especiais */
-        .btn-primary { background: #f39c12 !important; color: #000 !important; } /* Cor de destaque */
-        .btn-etsy { border-left: 5px solid #F45800; }
-        .btn-insta { border-left: 5px solid #E1306C; }
-        .btn-yt { border-left: 5px solid #FF0000; }
-        .btn-tiktok { border-left: 5px solid #00f2ea; }
+        /* CORES PERSONALIZADAS (Bordas Laterais) */
+        .btn-etsy { border-left: 6px solid #F45800 !important; }
+        .btn-aliexpress { border-left: 6px solid #FF4747 !important; }
+        .btn-wallapop { border-left: 6px solid #03cebe !important; }
+        
+        .btn-cults { border-left: 6px solid #8659ff !important; }
+        .btn-thangs { border-left: 6px solid #00d1ff !important; }
+        .btn-creality { border-left: 6px solid #32de84 !important; }
+        
+        .btn-insta { border-left: 6px solid #E1306C !important; }
+        .btn-yt { border-left: 6px solid #FF0000 !important; }
+        .btn-tiktok { border-left: 6px solid #00f2ea !important; }
+        .btn-fb { border-left: 6px solid #1877F2 !important; }
+
+        /* Destaque para a Etsy (Fundo Laranja) */
+        .btn-primary { background: #f39c12 !important; color: #000 !important; border: none !important; }
+        .btn-primary:hover { background: #e69510 !important; }
+
+        footer { margin-top: 50px; font-size: 0.8rem; color: #444; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="Gemini_Generated_Image_zhw2n8zhw2n8zhw2.png" alt="Buica Studio 3D" class="logo">
+    <img src="logo.png" alt="Buica Studio 3D" class="logo">
 
     <div class="intro">
-        <p>Bem-vindo à <strong>BUICA STUDIO 3D</strong>! Aqui aliamos a tecnologia da impressão 3D ao design criativo para dar vida a peças únicas. Desde artigos de decoração a soluções personalizadas, todos os nossos produtos são fabricados com precisão e cuidado em solo nacional. Explore as nossas coleções e descubra como a inovação pode transformar o seu espaço.</p>
+        <p>Bem-vindo à <strong>BUICA STUDIO 3D</strong>! Aliamos tecnologia de impressão 3D ao design criativo para dar vida a peças únicas fabricadas em solo nacional.</p>
     </div>
 
     <h2 class="category-title">Comprar Produtos</h2>
     <div class="link-grid">
-        <a href="https://buicastudio3d.etsy.com" target="_blank" class="btn btn-primary btn-etsy">ETSY</a>
-        <a href="https://s.click.aliexpress.com/e/_c4tLaJ2J" target="_blank" class="btn">AliExpress</a>
-        <a href="https://pt.wallapop.com/user/buicas-477470807" target="_blank" class="btn">Wallapop</a>
-        <a href="https://www.vinted.pt/member/3149567951" target="_blank" class="btn">Vinted</a>
-        <a href="https://www.olx.pt/ads/user/ureIh/?fbclid=IwY2xjawRcLMhleHRuA2FlbQIxMQBicmlkETFORldlTWVSSE9Gc3dHbzJWc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuamB1D2_r5jL_-c1hu9D69ObMcFWfdeACs_6p6gb9s6ij_gb3T6VB-At-zW_aem_zKJ5QWlryMknvCR7l2Xe5Q" target="_blank" class="btn">OLX</a>
-
+        <a href="https://buicastudio3d.etsy.com" target="_blank" class="btn btn-primary btn-etsy">Loja Oficial na ETSY</a>
+        <a href="https://s.click.aliexpress.com/e/_c4tLaJ2J" target="_blank" class="btn btn-aliexpress">AliExpress</a>
+        <a href="https://pt.wallapop.com/user/buicas-477470807" target="_blank" class="btn btn-wallapop">Wallapop</a>
     </div>
 
     <h2 class="category-title">Arquivos e Modelos 3D</h2>
     <div class="link-grid">
-        <a href="https://cults3d.com/pt/usuarios/buicastudio3d/" target="_blank" class="btn">Cults3D</a>
-        <a href="https://thangs.com/designer/buicastudio3d" target="_blank" class="btn">Thangs</a>
-        <a href="https://www.crealitycloud.com/user-profile/1991896897/models" target="_blank" class="btn">Creality Cloud</a>
-        <a href="https://www.crealitycloud.com/flowprint/pt/user/1991896897/model" target="_blank" class="btn">Creality flow print</a>
-     
+        <a href="https://cults3d.com/pt/usuarios/buicastudio3d/" target="_blank" class="btn btn-cults">Cults3D</a>
+        <a href="https://thangs.com/designer/buicastudio3d" target="_blank" class="btn btn-thangs">Thangs</a>
+        <a href="https://www.crealitycloud.com/user-profile/1991896897/models" target="_blank" class="btn btn-creality">Creality Cloud</a>
     </div>
 
     <h2 class="category-title">Siga-nos</h2>
@@ -90,16 +105,13 @@
         <a href="https://www.instagram.com/buicastudio3d/" target="_blank" class="btn btn-insta">Instagram</a>
         <a href="https://www.youtube.com/@BuicaStudio3D" target="_blank" class="btn btn-yt">YouTube</a>
         <a href="https://www.tiktok.com/@buicastudio3d" target="_blank" class="btn btn-tiktok">TikTok</a>
-        <a href="https://www.facebook.com/profile.php?id=61567605696934" target="_blank" class="btn">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61567605696934" target="_blank" class="btn btn-fb">Facebook</a>
     </div>
 
      <h2 class="category-title">whatsapp</h2>
     <div class="link-grid">
         <a href="https://wa.me/351932098502" target="_blank" class="btn btn-insta">whatsapp</a>
-
-    </div>
-
-    <p style="margin-top: 50px; font-size: 0.8rem; color: #444;">© 2024 Buica Studio 3D</p>
+    <footer>© 2024 Buica Studio 3D</footer>
 </div>
 
 </body>

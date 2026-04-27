@@ -3,51 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2; url=https://buicastudio3d.etsy.com">
-    <title>Buica Studio 3D</title>
+    <title>Buica Studio 3D | Links Oficiais</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background-color: #0a0a0a;
             color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
+            padding: 40px 20px;
         }
-        .loader {
-            border: 3px solid #333;
-            border-top: 3px solid #f39c12;
-            border-radius: 50%;
-            width: 30px; height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+        .container { max-width: 600px; width: 100%; text-align: center; }
+        
+        /* Banner e Logo */
+        .logo { width: 100%; max-width: 500px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 0 30px rgba(243, 156, 18, 0.2); }
+        
+        .intro { margin-bottom: 30px; font-size: 1rem; color: #ccc; padding: 0 10px; }
+        .intro strong { color: #f39c12; }
+
+        /* Categorias */
+        .category-title { 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-size: 0.9rem; 
+            color: #f39c12; 
+            margin: 30px 0 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
         }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        img { 
-        width: 100%;
-            max-width: 800px; /* Aumentamos para 800px para impacto total */
-            height: auto; 
-            margin-bottom: 25px;
-            border-radius: 15px;
-            box-shadow: 0 0 40px rgba(243, 156, 18, 0.4); /* Brilho mais forte para combinar */
+
+        /* Botões */
+        .link-grid { display: grid; gap: 12px; }
+        .btn {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+            background: #1a1a1a;
+            border: 1px solid #333;
         }
+        .btn:hover { transform: translateY(-3px); background: #222; border-color: #f39c12; }
+
+        /* Cores Especiais */
+        .btn-primary { background: #f39c12 !important; color: #000 !important; } /* Cor de destaque */
+        .btn-etsy { border-left: 5px solid #F45800; }
+        .btn-insta { border-left: 5px solid #E1306C; }
+        .btn-yt { border-left: 5px solid #FF0000; }
+        .btn-tiktok { border-left: 5px solid #00f2ea; }
     </style>
 </head>
 <body>
-    <div>
- <img src="Gemini_Generated_Image_zhw2n8zhw2n8zhw2.png" alt="Buica Studio 3D">
-        <div class="loader"></div>
-        <p>Estamos a levar você para a nossa loja oficial na <strong>Etsy</strong>...</p>
+
+<div class="container">
+    <img src="logo.png" alt="Buica Studio 3D" class="logo">
+
+    <div class="intro">
+        <p>Bem-vindo à <strong>BUICA STUDIO 3D</strong>! Aliamos tecnologia de impressão 3D ao design criativo para dar vida a peças únicas fabricadas em solo nacional.</p>
     </div>
 
-    <script>
-        // Redirecionamento de segurança via Script
-        setTimeout(function(){
-            window.location.href = "https://buicastudio3d.etsy.com";
-        }, 2000);
-    </script>
+    <h2 class="category-title">Comprar Produtos</h2>
+    <div class="link-grid">
+        <a href="https://buicastudio3d.etsy.com" target="_blank" class="btn btn-primary btn-etsy">Loja Oficial na ETSY</a>
+        <a href="https://s.click.aliexpress.com/e/_c4tLaJ2J" target="_blank" class="btn">AliExpress</a>
+        <a href="https://pt.wallapop.com/user/buicas-477470807" target="_blank" class="btn">Wallapop</a>
+    </div>
+
+    <h2 class="category-title">Arquivos e Modelos 3D</h2>
+    <div class="link-grid">
+        <a href="https://cults3d.com/pt/usuarios/buicastudio3d/" target="_blank" class="btn">Cults3D</a>
+        <a href="https://thangs.com/designer/buicastudio3d" target="_blank" class="btn">Thangs</a>
+        <a href="https://www.crealitycloud.com/user-profile/1991896897/models" target="_blank" class="btn">Creality Cloud</a>
+    </div>
+
+    <h2 class="category-title">Siga-nos</h2>
+    <div class="link-grid">
+        <a href="https://www.instagram.com/buicastudio3d/" target="_blank" class="btn btn-insta">Instagram</a>
+        <a href="https://www.youtube.com/@BuicaStudio3D" target="_blank" class="btn btn-yt">YouTube</a>
+        <a href="https://www.tiktok.com/@buicastudio3d" target="_blank" class="btn btn-tiktok">TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=61567605696934" target="_blank" class="btn">Facebook</a>
+    </div>
+
+    <p style="margin-top: 50px; font-size: 0.8rem; color: #444;">© 2024 Buica Studio 3D</p>
+</div>
+
 </body>
 </html>
